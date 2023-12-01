@@ -13,6 +13,8 @@ public class ItemVisualisation {
         this.priceCatcherData = priceCatcherData;
         this.lookupPremiseData = lookupPremiseData;
         this.lookupItemData = lookupItemData;
+        //constructor that hold these lists
+        //enable us to access these lists
     }
 
     public void displayTopFiveCheapestSellers(String itemName, String unit) {
@@ -31,6 +33,7 @@ public class ItemVisualisation {
             }
 
             sellers.sort(Comparator.comparingDouble(row -> Double.parseDouble(row[3])));
+            //sort the price in ascending order
 
             int count = 0;
             List<String> displayedPremises = new ArrayList<>(); // Track displayed premises
@@ -40,7 +43,7 @@ public class ItemVisualisation {
                 }
                 String premiseCode = seller[1];
                 String premiseDetails = getPremiseDetails(premiseCode);
-                if (premiseDetails != null && !displayedPremises.contains(premiseDetails)) {
+                if (premiseDetails != null && !displayedPremises.contains(premiseDetails)) { //ensure no repeated sellers exists for specified item
                     System.out.println((count + 1) + ". " + premiseDetails);
                     System.out.println("Price: $" + seller[3]);
                     System.out.println();
@@ -74,11 +77,11 @@ public class ItemVisualisation {
     }
 
     public static void main(String[] args) {
-        // Read CSV files (Replace file paths with your actual file paths)
+        
         String priceCatcherFilePath = "C:\\Users\\User2022\\Downloads\\pricecatcher_2023-08 (1).csv";
         String lookupPremiseFilePath = "C:\\Users\\User2022\\Downloads\\lookup_premise.csv";
         String lookupItemFilePath = "C:\\Users\\User2022\\Downloads\\lookup_item.csv";
-
+        //read three csv files
         List<String[]> priceCatcherData = CSVDataReader.readCSV(priceCatcherFilePath);
         List<String[]> lookupPremiseData = CSVDataReader.readCSV(lookupPremiseFilePath);
         List<String[]> lookupItemData = CSVDataReader.readCSV(lookupItemFilePath);
@@ -95,7 +98,7 @@ public class ItemVisualisation {
 
         System.out.println("Top 5 Cheapest Sellers for " + itemName + " (" + unit + ")");
 
-
+        //displayTopFiveCheapestSellers method that pass arguments itemName and unit
         visualisation.displayTopFiveCheapestSellers(itemName, unit);
 
         scanner.close();
