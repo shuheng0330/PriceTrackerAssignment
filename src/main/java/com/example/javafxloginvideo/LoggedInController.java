@@ -1,3 +1,4 @@
+package com.example.javafxloginvideo;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -33,7 +34,7 @@ public class LoggedInController implements Initializable {
     }
 
     public void setUserInformation(String username){
-        label_welcome.setText(("Welcome"+ username +"!"));
+        label_welcome.setText(("Welcome"+ username + "!"));
 
     }
 }

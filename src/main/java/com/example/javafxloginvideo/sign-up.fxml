@@ -5,13 +5,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxloginvideo.SignUpController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DA0505;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Downloads/burger.png" />
+                  <Image url="@burger.png" />
                </image></ImageView>
             <Label layoutX="36.0" layoutY="270.0" text="(60)-182674881">
                <font>
@@ -76,7 +76,7 @@
                   <Font name="SansSerif Regular" size="15.0" />
                </font>
             </PasswordField>
-            <Button fx:id="button_signup" layoutX="155.0" layoutY="290.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-color: #7277E8;" text="Signup">
+            <Button fx:id="button_sign_up" layoutX="155.0" layoutY="290.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-color: #7277E8;" text="Signup">
                <font>
                   <Font name="SansSerif Regular" size="20.0" />
                </font>
@@ -86,7 +86,7 @@
                   <Font name="Arial Black" size="15.0" />
                </font>
             </Label>
-            <Button fx:id="button_login" layoutX="226.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Log In!" textFill="#2408f5" underline="true">
+            <Button fx:id="button_log_in" layoutX="226.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Log In!" textFill="#2408f5" underline="true">
                <font>
                   <Font name="SansSerif Regular" size="15.0" />
                </font>
